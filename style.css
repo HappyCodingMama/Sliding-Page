@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+section{
+    height: 100vh;
+    width: 100%;
+}
+.slider{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow-x:hidden;
+}
+.slide.active{
+    transform:translateX(0%);
+}
+.slide{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* z-index: -1; */
+    background-size:cover;
+    transform: translateX(100%);
+}
+
+.slide::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.795);
+    z-index: -1;
+}
+
+.slide-1{
+    background-image: url(./img/img-1.jpg);
+}
+.slide-2{
+    background-image: url(./img/img-2.jpg);
+}
+.slide-3{
+    background-image: url(./img/img-3.jpg);
+}
+.slide-4{
+    background-image: url(./img/img-4.jpg);
+}
